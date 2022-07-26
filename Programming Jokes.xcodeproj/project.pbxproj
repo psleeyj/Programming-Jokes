@@ -11,6 +11,7 @@
 		D627AB7B289044D300CEEA6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627AB7A289044D300CEEA6D /* ContentView.swift */; };
 		D627AB7D289044D500CEEA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D627AB7C289044D500CEEA6D /* Assets.xcassets */; };
 		D627AB80289044D500CEEA6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D627AB7F289044D500CEEA6D /* Preview Assets.xcassets */; };
+		D627AB8728904C4C00CEEA6D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D627AB8628904C4C00CEEA6D /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D627AB7A289044D300CEEA6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D627AB7C289044D500CEEA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D627AB7F289044D500CEEA6D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D627AB8628904C4C00CEEA6D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				D627AB78289044D300CEEA6D /* Programming_JokesApp.swift */,
 				D627AB7A289044D300CEEA6D /* ContentView.swift */,
+				D627AB8628904C4C00CEEA6D /* SwiftyJSON.swift */,
 				D627AB7C289044D500CEEA6D /* Assets.xcassets */,
 				D627AB7E289044D500CEEA6D /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D627AB8728904C4C00CEEA6D /* SwiftyJSON.swift in Sources */,
 				D627AB7B289044D300CEEA6D /* ContentView.swift in Sources */,
 				D627AB79289044D300CEEA6D /* Programming_JokesApp.swift in Sources */,
 			);

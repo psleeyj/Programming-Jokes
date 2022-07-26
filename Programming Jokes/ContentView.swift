@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var jokes = [Joke]()
+    @State private var showingAlert = false
     
     var body: some View {
         NavigationView {
@@ -23,10 +24,30 @@ struct ContentView: View {
         .onAppear() {
             getJokes()
         }
+        .alert(isPresented: $showingAlert){
+            Alert(title: Text("Loading Error"),
+            message: Text("There was a problem loading the data"),
+                  dismissButton: .default(Text("Ok")))
+        }
     }
     
     func getJokes() {
         let apiKey = "?rapidapi-key = 758f477fdcmsh2b78f5fdd0bf86bp1ccc3fjsnbd45cb1f4332"
+        let query = "https://dad-jokes.p.rapidapi.com/joke/type/programming\(apiKey)"
+        if let url = URL(string: query) {
+            if let data = try? Data(contentsOf: url) {
+                let json = try! JSON(data: data)
+                if json["success"] == true {
+                    let contents = json["body"].arrayValue
+                    for item in contents{
+                        let setup = item["setup"].stringValue
+                        let punchline = item["punchline"].stringValue
+                        let joke = Joke(setup: setup, punchline: punchline)
+                        jokes.append(joke)
+                    }
+                }
+            }
+        }
     }
 }
 
